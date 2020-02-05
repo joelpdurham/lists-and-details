@@ -1,12 +1,12 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+//import PropTypes from 'prop-types';
 import {
   BrowserRouter as Router,
   // Route,
   // Switch,
   // Link
 } from 'react-router-dom';
-
+import Body from './Body.js';
 
 const Header = () => (
   <>
