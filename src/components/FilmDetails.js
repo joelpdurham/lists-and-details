@@ -1,0 +1,20 @@
+import React from 'react';
+import { useParams } from 'react-router-dom';
+import { useFindFilmByTitle } from '../hooks/useFindFilmById';
+
+const FilmDetails = () => {
+  const { id } = useParams();
+  const { film } = useFindFilmByTitle(id);
+
+
+  return (
+    <>
+      <h4>{film.title}</h4>
+      <p>{film.description}</p>
+      <p>Directed by {film.director}</p>
+      <p>Released: {film.release_date}</p>
+    </>
+  );
+};
+
+export default FilmDetails;
