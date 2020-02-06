@@ -1,10 +1,11 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
-import { useFindFilmByTitle } from '../hooks/useFindFilmByTitle';
+import { useFindFilmByTitle } from '../hooks/useFindFilmById';
 
 const FilmDetails = () => {
   const { filmTitle } = useParams();
   const { film } = useFindFilmByTitle(filmTitle);
+
 
   return (
     <>

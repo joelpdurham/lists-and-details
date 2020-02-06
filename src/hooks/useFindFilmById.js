@@ -1,12 +1,11 @@
 import { useState, useEffect } from 'react';
-import getFilms from '../services/getFilms';
+import { getFilmsById } from '../services/getFilms';
 
-export const useFindFilmByTitle = (title) => {
+export const useFindFilmByTitle = (id) => {
   const [film, setFilm] = useState({});
 
   useEffect(() => {
-    getFilms()
-      .then(films => films.find(film => film.title === title))
+    getFilmsById(id)
       .then(film => setFilm(film));
   }, []);
 

@@ -7,9 +7,9 @@ const Film = ({ film }) => {
 
   const handleClick = event => {
     event.preventDefault();
-    history.push(`/${film.title}`);
+    history.push(`/${film.id}`);
   };
-  
+
   return (
     <h4 onClick={handleClick}>{film.title}</h4>
   );
@@ -17,7 +17,8 @@ const Film = ({ film }) => {
 
 Film.propTypes = {
   film: PropTypes.shape({
-    title: PropTypes.string
+    title: PropTypes.string.isRequired,
+    id: PropTypes.string.isRequired
   })
 };
 
