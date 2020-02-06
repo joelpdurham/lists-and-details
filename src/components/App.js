@@ -18,7 +18,7 @@ export default function App() {
       <Header />
       <Switch>
         <Route exact path="/" component={Films}/>
-        <Route path="/:filmTitle" component={FilmDetails}/>
+        <Route path="/:id" component={FilmDetails}/>
       </Switch>
     </Router>
   );

@@ -3,8 +3,8 @@ import { useParams } from 'react-router-dom';
 import { useFindFilmByTitle } from '../hooks/useFindFilmById';
 
 const FilmDetails = () => {
-  const { filmTitle } = useParams();
-  const { film } = useFindFilmByTitle(filmTitle);
+  const { id } = useParams();
+  const { film } = useFindFilmByTitle(id);
 
 
   return (
