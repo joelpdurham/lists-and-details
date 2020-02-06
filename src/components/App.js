@@ -1,12 +1,9 @@
 import React from 'react';
-//import PropTypes from 'prop-types';
 import {
-  BrowserRouter as Router,
-  // Route,
-  // Switch,
-  // Link
+  BrowserRouter as Router, Switch, Route
 } from 'react-router-dom';
-import Body from './Body.js';
+import Films from './Films.js';
+import FilmDetails from './FilmDetails.js';
 
 const Header = () => (
   <>
@@ -19,7 +16,10 @@ export default function App() {
   return (
     <Router>
       <Header />
-      <Body />
+      <Switch>
+        <Route exact path="/" component={Films}/>
+        <Route path="/:filmTitle" component={FilmDetails}/>
+      </Switch>
     </Router>
   );
 }

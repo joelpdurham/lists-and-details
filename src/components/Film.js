@@ -1,14 +1,24 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { useHistory } from 'react-router-dom';
 
-const Film = ({ title }) => {
+const Film = ({ film }) => {
+  const history = useHistory();
+
+  const handleClick = event => {
+    event.preventDefault();
+    history.push(`/${film.title}`);
+  };
+  
   return (
-    <h4>{title}</h4>
+    <h4 onClick={handleClick}>{film.title}</h4>
   );
 };
 
 Film.propTypes = {
-  title: PropTypes.string.isRequired
+  film: PropTypes.shape({
+    title: PropTypes.string
+  })
 };
 
 export default Film;

@@ -2,7 +2,7 @@ import React from 'react';
 import Film from './Film.js';
 import { useGetFilms } from '../hooks/useGetFilms.js';
 
-const Body = () => {
+const Films = () => {
   const { films } = useGetFilms();
 
   const filmList = films.map((film, i) => (
@@ -13,7 +13,7 @@ const Body = () => {
   
   return (
     <>
-      <h3>my body</h3>
+      <h3>Films</h3>
       <ul>
         {filmList}
       </ul>
@@ -21,4 +21,4 @@ const Body = () => {
   );
 };
 
-export default Body;
+export default Films;
